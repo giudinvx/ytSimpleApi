@@ -26,9 +26,9 @@ Zend_Loader::loadClass('Zend_Gdata_YouTube');
 
 class ytSimpleApi extends Zend_Gdata_YouTube {
 	
-	protected static $videoEntry;
-	protected static $ytVideo;
-	protected static $videoId;
+	protected static $videoEntry = null;
+	protected static $ytVideo = null;
+	protected static $videoId = null;
 	
 	public function __construct( $videoId = null )
 	{
