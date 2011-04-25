@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>ytSimpleApi Documentation</title>
+
+
+
+
+
+
+
+
+
+<style type="text/css">p.box{background-color:#EEEEEE;width:650;}</style></head><body><a href="example.html">
+</a><h2><a href="example.html">yrSimpleApi Documentation by "giudinvx" v1.0</a></h2>
+
+
+
+<span style="font-weight: bold;"><a href="example.html">Introduction</a></span>
+<a href="example.html"><br />
+
+
+ytSimpleApi, is a simple plugin that make easy use youtube Api, with this class<br />
+
+
+you can create a youtube box in your website, infact you can extract same info from a youtube url or id.
+
+<br />
+
+
+</a><hr style="width: 100%; height: 2px;" /><a href="example.html"><br />
+
+
+<span style="font-weight: bold;">Installation</span>
+<br />
+
+
+Copy the file ytSimpleApi.php and /zend footer in your website root, or where you want use this.
+
+<br />
+
+
+
+</a><hr style="width: 100%; height: 2px;" /><a href="example.html"><br />
+
+
+<span style="font-weight: bold;">Implementation</span>
+<br />
+
+
+First you must know that this plugin was design for use in two way, can instance an object or<br />
+
+
+call any method with scope operator "::".<br />
+
+
+I now show you what you can do with this. <br />
+
+
+<br />
+
+
+Create a new file and call the class:
+
+<br />
+
+
+</a><p class="box"><a href="example.html">require_once( "ytSimpleApi.php" );</a></p>
+
+
+<a href="example.html"><br />
+
+
+Instance it's with an id or url (we use a url):
+
+<br />
+
+
+</a><p class="box"><a href="example.html">$instanceyt = new ytSimpleApi("http://www.youtube.com/watch?v=the0KZLEacs");</a></p>
+
+
+<a href="example.html"><br />
+
+
+<big><big><span style="font-weight: bold;">Function</span></big></big>:<br />
+
+
+<br />
+
+
+<span style="font-weight: bold; font-style: italic;">info()</span><br />
+
+
+Now we can use this instance for extract some info with "<span style="font-weight: bold;">info()</span>" function, <br />
+
+
+
+default it's <span style="font-weight: bold;">return an array</span> but if you want a json code you can.
+
+<br />
+
+
+<br />
+
+
+</a><p class="box"><a href="example.html">$array_info = $instanceyt-&gt;info();
+<br />
+print_r( $array_info );<br /></a></p>
+
+
+<a href="example.html"><br />
+
+
+And return:<br />
+
+
+</a><p class="box">
+<a href="example.html">Array
+(
+    <br />
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">VideoId</span>] =&gt; the0KZLEacs
+    <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">VideoTitle</span>] =&gt; Google Developer Day 2007
+    <br />
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Author</span>] =&gt; GoogleDeveloperDay
+    <br />
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">LastUpdate</span>] =&gt; 2011-02-03T01:47:10.000Z
+    <br />
+
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Published</span>] =&gt; 2007-06-06T18:02:35.000Z
+    <br />
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Category</span>] =&gt; News<br />
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Description</span>] =&gt; Snapshots from Google Developer Day 2007
+    <br />
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Tags</span>] =&gt; GDD07, GoogleDeveloperDay, Google, 2007
+    <br />
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Duration</span>] =&gt; 169
+    <br />
+
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">NumView</span>] =&gt; 13324
+    <br />
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">NumLikes</span>] =&gt; 6
+    <br />
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">numDislikes</span>] =&gt; 3<br />
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">numComments</span>] =&gt; 25
+    <br />
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Rating</span>] =&gt; Array
+        (
+            <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">average</span>] =&gt; 3.6666667<br />
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; [<span style="font-weight: bold;">numRaters</span>] =&gt; 9
+        )
+
+    <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">Thumb</span>] =&gt; Array
+        (
+            <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">0]</span> =&gt; Array
+                (
+                    <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">time</span>] =&gt; 00:01:24.500
+                    &nbsp;&nbsp;&nbsp; <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">height</span>] =&gt; 90
+                    <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">width</span>] =&gt; 120
+                    <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">url</span>] =&gt; http://i.ytimg.com/vi/the0KZLEacs/default.jpg
+                )
+
+            <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">1]</span> =&gt; Array
+                (
+                    <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">time</span>] =&gt; 
+                    00:01:24.500<br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">height</span>] =&gt; 360
+                    <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">width</span>] =&gt; 480
+                    <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">url</span>] =&gt; http://i.ytimg.com/vi/the0KZLEacs/hqdefault.jpg
+                )
+
+            <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">2</span>] =&gt; Array
+                (
+                    <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">time</span>] =&gt; 00:00:42.250<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; [<span style="font-weight: bold;">height</span>] =&gt; 90
+                    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">width</span>] =&gt; 120
+                    <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">url</span>] =&gt; http://i.ytimg.com/vi/the0KZLEacs/1.jpg
+                )
+
+            <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">3</span>] =&gt; Array
+                (<br />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">time</span>] =&gt; 00:01:24.500
+                    &nbsp;&nbsp;&nbsp; <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">height</span>] =&gt; 90&nbsp;&nbsp;&nbsp; <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">width</span>] =&gt; 120
+                    <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">url</span>] =&gt; http://i.ytimg.com/vi/the0KZLEacs/2.jpg
+                )
+
+            <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">4</span>] =&gt; Array
+                (
+                    <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">time</span>] =&gt; 00:02:06.750
+                    <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">height</span>] =&gt; 90
+                    <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; [<span style="font-weight: bold;">width</span>] =&gt; 120<br />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; [<span style="font-weight: bold;">url</span>] =&gt; http://i.ytimg.com/vi/the0KZLEacs/3.jpg
+                <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; )
+
+        <br />
+
+&nbsp;&nbsp;&nbsp; )
+
+<br />
+)
+
+</a></p>
+
+
+
+
+<a href="example.html">But if you want a <span style="font-weight: bold;">json code</span>? do this:
+
+<br />
+
+
+
+</a><p class="box"><a href="example.html">$json_info = $instanceyt-&gt;info("json");
+<br />
+echo $json_info;</a></p>
+
+
+
+<p class="box">
+<a href="example.html">{<br />
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">VideoId</span>":"the0KZLEacs",
+   <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">VideoTitle</span>":"Google Developer Day 2007",
+   <br />
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Author</span>":"GoogleDeveloperDay",
+   <br />
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">LastUpdate</span>":"2011-02-03T01:47:10.000Z",
+   <br />
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Published</span>":"2007-06-06T18:02:35.000Z",
+   <br />
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Category</span>":"News",
+   <br />
+
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Description</span>":"Snapshots from Google Developer Day 2007",
+   <br />
+
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Tags</span>":"GDD07, GoogleDeveloperDay, Google, 2007",
+   <br />
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Duration</span>":"169",
+   <br />
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">NumView</span>":"13324",
+   <br />
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">NumLikes</span>":"6",
+   <br />
+
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">numDislikes</span>":"3",
+   <br />
+
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">numComments</span>":25,
+   <br />
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Rating</span>":{
+      <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">average</span>":"3.6666667",
+      <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">numRaters</span>":"9"
+   <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; },
+   &nbsp;&nbsp;&nbsp; <br />
+
+
+
+&nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">Thumb</span>":[
+      <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {
+         <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">time</span>":"00:01:24.500",
+         <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">height</span>":"90",
+         <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">width</span>":"120",
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">url</span>":"http:\/\/i.ytimg.com\/vi\/the0KZLEacs\/default.jpg"
+      <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; },
+      <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {
+         <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">time</span>":"00:01:24.500",&nbsp;&nbsp; &nbsp;
+
+         <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">height</span>":"360",
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">width</span>":"480",
+         <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">url</span>":"http:\/\/i.ytimg.com\/vi\/the0KZLEacs\/hqdefault.jpg"
+      <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; },
+      <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {
+         <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">time</span>":"00:00:42.250",
+         <br />
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">height</span>":"90",
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">width</span>":"120",
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">url</span>":"http:\/\/i.ytimg.com\/vi\/the0KZLEacs\/1.jpg"
+      <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; },
+      <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">time</span>":"00:01:24.500",
+         &nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">height</span>":"90",
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">width</span>":"120",
+         <br />
+
+
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">url</span>":"http:\/\/i.ytimg.com\/vi\/the0KZLEacs\/2.jpg"
+      <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; },
+      &nbsp;&nbsp;&nbsp; <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; {
+         <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">time</span>":"00:02:06.750",
+         <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">height</span>":"90",
+         <br />
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">width</span>":"120",
+         <br />
+
+
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; "<span style="font-weight: bold;">url</span>":"http:\/\/i.ytimg.com\/vi\/the0KZLEacs\/3.jpg"
+      <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }
+   <br />
+
+
+
+&nbsp;&nbsp;&nbsp; ]
+<br />
+}
+
+<br />
+
+</a></p>
+
+<hr style="width: 100%; height: 2px;" /><a href="example.html"><br />
+
+
+<span style="font-weight: bold; font-style: italic;">comment()<br />
+<br />
+</span>
+<span style="font-weight: bold;">Extract comment function description</span>:
+
+<br />
+
+
+This is really useful function because you can use this for extract all comment, <br />
+
+
+only <span style="font-style: italic;">n</span> comment or comment between <span style="font-style: italic;">n</span> and <span style="font-style: italic;">n</span>:
+
+<br />
+
+
+<br style="font-weight: bold;" />
+
+
+
+<span style="font-weight: bold;">Extract all comment</span>:
+
+<br />
+
+
+</a><p class="box"><a href="example.html">$instanceyt-&gt;comment();</a></p>
+
+
+
+<a href="example.html"><br />
+
+
+<span style="font-weight: bold;">Extract only first 5 comment</span>:
+
+<br />
+
+
+</a><p class="box"><a href="example.html">$instanceyt-&gt;comment(5);</a></p>
+
+
+
+
+<a href="example.html"><br />
+
+
+<span style="font-weight: bold;">Extract comment between 5 and 10</span>:
+
+<br />
+
+
+</a><p class="box"><a href="example.html">$instanceyt-&gt;comment(5,10);</a></p>
+
+
+
+<span style="font-style: italic;"><a href="example.html">First argument where you want start, and second argument where you want came.<br />
+</a></span>
+<hr style="width: 100%; height: 2px;" /><span style="font-style: italic;"><a href="example.html"><br />
+
+<span style="font-weight: bold; font-style: italic;">embed()<br />
+<br />
+With this function your embed a video in your site</span><span style="font-style: italic;">:</span>
+
+
+
+
+</a></span><a href="example.html"><br />
+
+
+You can call this function with two argument, first <span style="font-style: italic;">width</span> and second <span style="font-style: italic;">height,<br />
+
+</span>if you don't set argument default are: width 640 and height 385.<br />
+
+
+<br />
+<span style="font-weight: bold;">Set width and height</span>:<br />
+
+
+</a><p class="box"><a href="example.html">$instanceyt-&gt;embed(400,150);</a></p>
+<span style="font-weight: bold;"><a href="example.html"><br />Set only width:</a></span><a href="example.html"><br />
+
+
+</a><p class="box"><a href="example.html">$instanceyt-&gt;embed(400);</a></p>
+
+
+
+
+<a href="example.html"><br />
+
+
+
+<span style="font-weight: bold;">Set only height</span>:<br />
+
+
+
+</a><p class="box"><a href="example.html">$instanceyt-&gt;embed(null,150);</a></p>
+
+
+<hr style="width: 100%; height: 2px;" /><a href="example.html"><br />
+
+<span style="font-weight: bold;">
+ Use Scope Resolution Operator (::)</span><br />
+
+
+
+<br />
+
+
+As I mentioned above, you can use this class also with this operator,<br />
+
+
+
+remember you'll always set a url or id in all function, there some example:<br />
+
+
+
+<br />
+
+
+
+</a><p class="box"><a href="example.html">echo ytSimpleApi::embed("http://www.youtube.com/watch?v=the0KZLEacs");<br /></a></p>
+
+<a href="example.html"><br />
+
+
+<span style="font-weight: bold;">Extract comment</span><br />
+
+</a><p class="box"><a href="example.html">ytSimpleApi::comment("the0KZLEacs"); //remember you can use also only a valid id</a></p>
+
+<a href="example.html"><br />
+
+<span style="font-weight: bold;">Extract some info</span><br />
+
+</a><p class="box"><a href="example.html">print_r(ytSimpleApi::info("the0KZLEacs"));</a></p>
+
+
+
+</body></html>
